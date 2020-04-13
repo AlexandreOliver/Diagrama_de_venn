@@ -3,7 +3,8 @@
  Projeto em Construção
  
  Contribuidores:
- Alexandre Oliver
+ 
+ Alexandre Oliver e
  Richard Smanhoto
 
 .
