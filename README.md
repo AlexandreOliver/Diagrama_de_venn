@@ -4,7 +4,7 @@
  
  Contribuidores:
  
- Alexandre Oliver e
- Richard Smanhoto
+ [Alexandre Oliver](https://github.com/AlexandreOliver) e
+ [Richard Smanhoto](https://github.com/RichardSmanhoto)
 
 .
