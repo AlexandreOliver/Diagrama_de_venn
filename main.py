@@ -4,7 +4,8 @@ from complements.connection import options, resp
 print("-=" * 21)
 print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
 print("-=" * 21)
-num = 4
+
+num = 5
 while num > 0:
     print("Adicione zero(0) ao valor que você não possui.")
     valores = [input("Conjunto A: "),
@@ -19,7 +20,9 @@ while num > 0:
             valores[value] = int(valores[value])
             num -= 1
         else:
-            print("\nUtilize apenas Numeros!!\n Tente Novamente.")
+            print("\nUtilize apenas Numeros!!\n Tente Novamente.\n")
+            sleep(0.5)
+
 print("\n")
 print("<"*4, "O que vc deseja que o Programa faça?", ">"*4)
 print("N°", " "*15, "Opções")
