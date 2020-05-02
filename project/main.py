@@ -1,9 +1,9 @@
 from time import sleep
-from Connect.connection import options
+from complements.connection import options, resp
 
-print("-=" * 20)
+print("-=" * 21)
 print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
-print("-=" * 20)
+print("-=" * 21)
 num = 4
 while num > 0:
     valores = [input("Conjunto A: "),
@@ -25,3 +25,4 @@ for n, opcao in options.items():
     print(n, " "*2, opcao, "|")
 print("<"*7, "Digite o Numero Correspondente:", ">"*6)
 user = input("===> ")
+resp(user)
