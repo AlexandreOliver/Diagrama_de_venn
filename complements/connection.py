@@ -6,10 +6,10 @@ options = {1: "Descobrir valor do Conjunto A      ",
 
 def resp(user):
     if user == 1:
-        print("1")
+        print("1")  # calculo 1
     elif user == 2:
-        print("2")
+        print("2")  # calculo 2
     elif user == 3:
-        print("3")
+        print("3")  # calculo 3
     elif user == 4:
-        print("4")
+        print("4")  # calculo 4
