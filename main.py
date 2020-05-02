@@ -4,12 +4,14 @@ from complements.connection import options, resp
 print("-=" * 21)
 print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
 print("-=" * 21)
+print("Adicione zero(0) ao valor que você não possui.")
 num = 4
 while num > 0:
     valores = [input("Conjunto A: "),
                input("Conjunto B: "),
                input("Intersecção: "),
-               input("Total: ")]    #Conjunto U
+               input("Valor fora dos conjuntos: "),
+               input("Total: ")]    # Conjunto U
     sleep(1)
     for value in valores:
         if value.isnumeric():
