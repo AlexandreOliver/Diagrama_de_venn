@@ -4,9 +4,9 @@ from complements.connection import options, resp
 print("-=" * 21)
 print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
 print("-=" * 21)
-print("Adicione zero(0) ao valor que você não possui.")
 num = 4
 while num > 0:
+    print("Adicione zero(0) ao valor que você não possui.")
     valores = [input("Conjunto A: "),
                input("Conjunto B: "),
                input("Intersecção: "),
