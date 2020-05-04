@@ -1,5 +1,5 @@
 
-def conjuntoA(valores):
+def ConjuntoA(valores):
     print()
 
 
