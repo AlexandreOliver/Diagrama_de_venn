@@ -1,9 +1,9 @@
 from time import sleep
 from connection import options, resp
 
-print("-=" * 21)
-print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
-print("-=" * 21)
+print("-=" * 23)
+print("   PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
+print("-=" * 23)
 
 num = 5
 while num > 0:
