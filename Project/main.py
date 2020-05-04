@@ -30,4 +30,4 @@ for n, opcao in options.items():
     print(n, " "*2, opcao, "|")
 print("<"*7, "Digite o Numero Correspondente:", ">"*6)
 user = input("===> ")
-resp(user)
+resp(user, valores)

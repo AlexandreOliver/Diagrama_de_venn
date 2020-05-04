@@ -7,7 +7,7 @@ options = {1: "Descobrir valor do Conjunto A      ",
            5: "Descobrir valor total              "}
 
 
-def resp(user):
+def resp(user, valores):
     if user == "1":
         print("1")  # calculo 1
     elif user == "2":
