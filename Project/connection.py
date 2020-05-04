@@ -1,3 +1,4 @@
+from firstSolutions import conjuntoA,ConjuntoB,Interseccao,ValueNotIn,ValorTotal
 
 
 options = {1: "Descobrir valor do Conjunto A      ",
