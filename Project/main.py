@@ -1,5 +1,5 @@
 from time import sleep
-from complements.connection import options, resp
+from connection import options, resp
 
 print("-=" * 21)
 print("PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
