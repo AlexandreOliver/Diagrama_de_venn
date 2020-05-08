@@ -9,15 +9,16 @@ options = {1: "Descobrir valor do Conjunto A      ",
 
 
 def resp(user, valores):
+    v = valores
     if user == "1":
-        return ConjuntoA(valores)
+        return ConjuntoA(v)
     elif user == "2":
-        return ConjuntoB(valores)
+        return ConjuntoB(v)
     elif user == "3":
-        return Intersec(valores)
+        return Intersec(v)
     elif user == "4":
-        return ValueNotIn(valores)
+        return ValueNotIn(v)
     elif user == "5":
-        return ValorTotal(valores)
+        return ValorTotal(v)
     else:
         return
