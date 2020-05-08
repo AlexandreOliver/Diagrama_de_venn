@@ -1,20 +1,20 @@
 
 def ConjuntoA(valores):
-    print()
+    return valores
 
 
 def ConjuntoB(valores):
-    print()
+    return valores
 
 
-def Interseccao(valores):
-    print()
+def Intersec(valores):
+    return valores
 
 
 def ValueNotIn(valores):
-    print()
+    return valores
 
 
 def ValorTotal(valores):
-    print()
+    return valores
 

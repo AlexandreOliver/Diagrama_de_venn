@@ -1,4 +1,4 @@
-from firstSolutions import ConjuntoA,ConjuntoB,Interseccao,ValueNotIn,ValorTotal
+from firstSolutions import ConjuntoA, ConjuntoB, Intersec, ValueNotIn,ValorTotal
 
 
 options = {1: "Descobrir valor do Conjunto A      ",
@@ -10,10 +10,14 @@ options = {1: "Descobrir valor do Conjunto A      ",
 
 def resp(user, valores):
     if user == "1":
-        print("1")  # calculo 1
+        return ConjuntoA(valores)
     elif user == "2":
-        print("2")  # calculo 2
+        return ConjuntoB(valores)
     elif user == "3":
-        print("3")  # calculo 3
+        return Intersec(valores)
     elif user == "4":
-        print("4")  # calculo 4
+        return ValueNotIn(valores)
+    elif user == "5":
+        return ValorTotal(valores)
+    else:
+        return
