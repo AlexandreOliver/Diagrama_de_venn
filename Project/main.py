@@ -31,7 +31,7 @@ def program():
                 inletra = True
         if inletra:
             sistema()
-            print("\nUtilize apenas Numeros!!\n Tente Novamente.\n")
+            print("Utilize apenas Numeros!!\n Tente Novamente.\n")
             sleep(0.5)
         else:
             break
@@ -41,17 +41,30 @@ def program():
 def execut():
     global user
     print("\n", "<"*4, "O que vc deseja que o Programa faça?", ">"*4)
+    print("         Para sair digite 'exit' :D")
     print("N°", " "*15, "Opções")
     for n, opcao in options.items():
         print(n, " "*2, opcao, "|")
     print("<"*7, "Digite o Numero Correspondente:", ">"*6)
     user = input("===> ")
 
-
+sistema()
 print("-=" * 23)
 print("   PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
-print("-=" * 23)
+print("-=" * 23, "\n")
 program()
-execut()
-resultado = resp(user, valores)
-print(resultado)
+while True:
+    sistema()
+    execut()
+    if user == "exit":
+        sleep(0.3)
+        sistema()
+        sleep(0.3)
+        print("Volte logo, amigo :D\n"
+              "Contribuidores:\n"
+              "Alexandre Oliver\n"
+              "Richard Smanhoto")
+        exit()
+    resultado = resp(user, valores)
+    print(resultado)
+    input()
