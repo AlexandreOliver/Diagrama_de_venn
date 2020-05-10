@@ -27,7 +27,7 @@ def program():
             if value.isnumeric():
                 posValue = valores.index(value)
                 valores[posValue] = int(valores[posValue])
-            if value.isnumeric() == False:
+            else:
                 inletra = True
         if inletra:
             sistema()
