@@ -10,7 +10,7 @@ def ConjuntoB(valores):
 def Intersec(valores):
     value = valores
     soma = value[0] + value[1] + value[3]
-    solution = s - value[4]
+    solution = soma - value[4]
     return solution
 
 
