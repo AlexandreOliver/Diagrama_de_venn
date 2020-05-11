@@ -8,7 +8,10 @@ def ConjuntoB(valores):
 
 
 def Intersec(valores):
-    return valores
+    value = valores
+    soma = value[0] + value[1] + value[3]
+    solution = s - value[4]
+    return solution
 
 
 def ValueNotIn(valores):
