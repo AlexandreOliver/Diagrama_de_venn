@@ -15,7 +15,11 @@ def Intersec(valores):
 
 
 def ValueNotIn(valores):
-    return valores
+    value = valores
+    sub = (value[0] - value[2]) + (value[1] - value[2])
+    soma = sub + value[2]
+    solution = (soma - value[4])*(-1)
+    return solution
 
 
 def ValorTotal(valores):
