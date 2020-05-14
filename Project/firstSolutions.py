@@ -7,25 +7,22 @@ def ConjuntoB(valores):
     return valores
 
 
-def Intersec(v):
-    soma = v[0] + v[1] + v[3]
-    solution = soma - v[4]
+def Intersec(valores):
+    solution = valores[0] + valores[1] + valores[3]
+    solution -= valores[4]
     return solution
 
 
-def conjInter(v):
-    volta = (v[0] - v[2]) + (v[1] - v[2]) + v[2]
-    return volta
+def conjInter(list):
+    value = (list[0] - list[2]) + (list[1] - list[2]) + list[2]
+    return value
 
-
-def ValueNotIn(v):
-    solution = conjInter(v)
-    solution = (solution - v[4])*(-1)
+def ValueNotIn(valores):
+    solution = (conjInter(valores) - valores[4])*(-1)
     return solution
 
 
-def ValorTotal(v):
-    solution = conjInter(v)
-    solution += v[3]
+def ValorTotal(valores):
+    solution = conjInter(valores) + v[3]
     return solution
 
