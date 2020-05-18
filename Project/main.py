@@ -3,11 +3,15 @@ from connection import options, resp
 from os import system
 import platform
 
+sistema = False
+if platform.system() == 'Windows':
+    sistema = True
 
-def sistema():
-    if platform.system() == 'Windows':
+
+def clear():
+    if sistema:
         system('cls')
-    elif platform.system() == 'Linux':
+    else:
         system('clear')
     return
 
@@ -29,13 +33,14 @@ def program():
                 valores[posValue] = int(valores[posValue])
             else:
                 inletra = True
+                break
         if inletra:
-            sistema()
+            clear()
             print("Utilize apenas Numeros!!\n Tente Novamente.\n")
-            sleep(0.5)
+            sleep(0.4)
         else:
             break
-    sistema()
+    clear()
 
 
 def execut():
@@ -46,19 +51,19 @@ def execut():
     for n, opcao in options.items():
         print(n, " "*2, opcao, "|")
     print("<"*7, "Digite o Numero Correspondente:", ">"*6)
-    user = input("===> ")
+    user = str(input("===> ")).strip().lower()
 
-sistema()
+clear()
 print("-=" * 23)
 print("   PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
 print("-=" * 23, "\n")
 program()
 while True:
-    sistema()
+    clear()
     execut()
     if user == "exit":
         sleep(0.3)
-        sistema()
+        clear()
         sleep(0.3)
         print("Volte logo, amigo :D\n"
               "Contribuidores:\n"

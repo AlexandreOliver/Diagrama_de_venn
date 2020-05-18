@@ -23,6 +23,6 @@ def ValueNotIn(valores):
 
 
 def ValorTotal(valores):
-    solution = conjInter(valores) + v[3]
+    solution = conjInter(valores) + valores[3]
     return solution
 
