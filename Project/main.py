@@ -29,7 +29,7 @@ def program1():
             clear()
             print("Utilize apenas Numeros!!\n Tente Novamente.\n")
             sleep(0.4)
-            return program()
+            return program1()
     clear()
 
 
