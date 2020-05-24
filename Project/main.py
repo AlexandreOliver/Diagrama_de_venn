@@ -3,43 +3,39 @@ from connection import options, resp
 from os import system
 import platform
 
-sistema = False
+op = False
 if platform.system() == 'Windows':
-    sistema = True
+    op = True
 
 
 def clear():
-    if sistema:
-        system('cls')
-    else:
-        system('clear')
-    return
+    if op:
+        return system('cls')
+    return system('clear')
 
 
 def program():
     global valores
-    while True:
-        inletra = False
-        print("Adicione zero(0) ao valor que você não possui.")
-        valores = [input("Conjunto A: "),
-                   input("Conjunto B: "),
-                   input("Intersecção: "),
-                   input("Valor fora dos conjuntos: "),
-                   input("Total: ")]    # Conjunto U
-        sleep(1)
-        for value in valores:
-            if value.isnumeric():
-                posValue = valores.index(value)
-                valores[posValue] = int(valores[posValue])
-            else:
-                inletra = True
-                break
-        if inletra:
-            clear()
-            print("Utilize apenas Numeros!!\n Tente Novamente.\n")
-            sleep(0.4)
+    inletra = False
+    print("Adicione zero(0) ao valor que você não possui.")
+    valores = [input("Conjunto A: "),
+                input("Conjunto B: "),
+                input("Intersecção: "),
+                input("Valor fora dos conjuntos: "),
+                input("Total: ")]    # Conjunto U
+    sleep(1)
+    for value in valores:
+        if value.isnumeric():
+            posValue = valores.index(value)
+            valores[posValue] = int(valores[posValue])
         else:
+            inletra = True
             break
+    if inletra:
+        clear()
+        print("Utilize apenas Numeros!!\n Tente Novamente.\n")
+        sleep(0.4)
+        return program()
     clear()
 
 
