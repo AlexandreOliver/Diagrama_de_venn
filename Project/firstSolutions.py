@@ -10,6 +10,7 @@ def ConjuntoB(valores):
 def Intersec(valores):
     solution = valores[0] + valores[1] + valores[3]
     solution -= valores[4]
+    valores[2] = solution
     return solution
 
 
@@ -19,10 +20,12 @@ def conjInter(list):
 
 def ValueNotIn(valores):
     solution = (conjInter(valores) - valores[4])*(-1)
+    valores[3] = solution
     return solution
 
 
 def ValorTotal(valores):
     solution = conjInter(valores) + valores[3]
+    valores[4] = solution
     return solution
 
