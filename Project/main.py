@@ -1,22 +1,19 @@
-from time import sleep
 from connection import options, resp
-from os import system
-import platform
+from time import sleep
+import os, platform
 
 op = False
 if platform.system() == 'Windows':
     op = True
 
-
 def clear():
     if op:
-        return system('cls')
-    return system('clear')
+        return os.system('cls')
+    return os.system('clear')
 
 
-def program():
+def program1():
     global valores
-    inletra = False
     print("Adicione zero(0) ao valor que você não possui.")
     valores = [input("Conjunto A: "),
                 input("Conjunto B: "),
@@ -37,7 +34,7 @@ def program():
 
 
 def execut():
-    global user
+    global user, resultado
     print("\n", "<"*4, "O que vc deseja que o Programa faça?", ">"*4)
     print("         Para sair digite 'exit' :D")
     print("N°", " "*15, "Opções")
@@ -45,24 +42,28 @@ def execut():
         print(n, " "*2, opcao, "|")
     print("<"*7, "Digite o Numero Correspondente:", ">"*6)
     user = str(input("===> ")).strip().lower()
+    if user == 'exit':
+        bye()
+    resultado = resp(user, valores)
+
+
+def bye():
+    sleep(0.3)
+    clear()
+    print("Volte logo :D\n"
+          "Contribuidores:\n"
+          "Alexandre Oliver\n"
+          "Richard Smanhoto")
+    exit()
+
 
 clear()
 print("-=" * 23)
 print("   PROGRAMA DE RESOLUÇÃO DO DIAGRAMA DE VENN")
 print("-=" * 23, "\n")
-program()
+program1()
 while True:
     clear()
     execut()
-    if user == "exit":
-        sleep(0.3)
-        clear()
-        sleep(0.3)
-        print("Volte logo :D\n"
-              "Contribuidores:\n"
-              "Alexandre Oliver\n"
-              "Richard Smanhoto")
-        exit()
-    resultado = resp(user, valores)
     print(resultado)
     input()
