@@ -29,13 +29,10 @@ def program():
             posValue = valores.index(value)
             valores[posValue] = int(valores[posValue])
         else:
-            inletra = True
-            break
-    if inletra:
-        clear()
-        print("Utilize apenas Numeros!!\n Tente Novamente.\n")
-        sleep(0.4)
-        return program()
+            clear()
+            print("Utilize apenas Numeros!!\n Tente Novamente.\n")
+            sleep(0.4)
+            return program()
     clear()
 
 
@@ -61,7 +58,7 @@ while True:
         sleep(0.3)
         clear()
         sleep(0.3)
-        print("Volte logo, amigo :D\n"
+        print("Volte logo :D\n"
               "Contribuidores:\n"
               "Alexandre Oliver\n"
               "Richard Smanhoto")
