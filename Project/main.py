@@ -1,6 +1,7 @@
 from connection import options, resp
 from time import sleep
-import os, platform
+import os, platform, sys
+import ctypes
 
 op = False
 if platform.system() == 'Windows':
@@ -13,13 +14,20 @@ def clear():
 
 
 def program1():
-    global valores
+    global valores, allsolutions
     print("Adicione zero(0) ao valor que você não possui.")
     valores = [input("Conjunto A: "),
                 input("Conjunto B: "),
                 input("Intersecção: "),
                 input("Valor fora dos conjuntos: "),
                 input("Total: ")]    # Conjunto U
+    allsolutions = (
+        "Conjunto A --",
+        "Conjunto B --",
+        "Intersecção --",
+        "Conjunto Fora --",
+        "Conjunto U --")
+
     sleep(1)
     for value in valores:
         if value.isnumeric():
@@ -31,6 +39,7 @@ def program1():
             sleep(0.4)
             return program1()
     clear()
+
 
 
 def execut():
@@ -65,5 +74,12 @@ program1()
 while True:
     clear()
     execut()
-    print(resultado)
+    if resultado == None:
+        print('Value Error. Digite novamente.')
+    else:
+        print(f'Resultado encontrado: {resultado}')
+        for k in allsolutions:
+            p = allsolutions.index(k)
+            print(f"{k} {valores[p]}")
+
     input()
