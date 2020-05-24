@@ -1,7 +1,6 @@
 from connection import options, resp
 from time import sleep
 import os, platform, sys
-import ctypes
 
 op = False
 if platform.system() == 'Windows':
@@ -39,7 +38,6 @@ def program1():
             sleep(0.4)
             return program1()
     clear()
-
 
 
 def execut():
@@ -81,5 +79,4 @@ while True:
         for k in allsolutions:
             p = allsolutions.index(k)
             print(f"{k} {valores[p]}")
-
     input()
