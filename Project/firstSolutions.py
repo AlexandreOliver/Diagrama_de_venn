@@ -1,9 +1,22 @@
 
 def ConjuntoA(valores):
+    cA = valores[0]
+    if cA == 0:
+        cA = valores[4] - (valores[1] + valores[2] + valores[3])
+        return cA
+    else:
+        cA -= valores[2]
+        return cA
     return valores
 
 
 def ConjuntoB(valores):
+    if cB == 0:
+        cB = valores[4] - (valores[0] + valores[2] + valores[3])
+        return cB
+    else:
+        cB -= valores[2]
+        return cB
     return valores
 
 
@@ -14,8 +27,8 @@ def Intersec(valores):
     return solution
 
 
-def conjInter(list):
-    value = (list[0] - list[2]) + (list[1] - list[2]) + list[2]
+def conjInter(valores):
+    value = (valores[0] - valores[2]) + (valores[1] - valores[2]) + valores[2]
     return value
 
 def ValueNotIn(valores):
