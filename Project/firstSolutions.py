@@ -1,3 +1,4 @@
+# valores = [conjA, conjB, intersec, vfora, total]
 
 def ConjuntoA(valores):
     cA = valores[0]
@@ -11,6 +12,7 @@ def ConjuntoA(valores):
 
 
 def ConjuntoB(valores):
+    cB = valores[1]
     if cB == 0:
         cB = valores[4] - (valores[0] + valores[2] + valores[3])
         return cB
