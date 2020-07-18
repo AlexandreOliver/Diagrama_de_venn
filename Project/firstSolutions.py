@@ -24,7 +24,7 @@ def ConjuntoB(valores):
 
 def Intersec(valores):
     solution = valores[0] + valores[1] + valores[3]
-    solution -= valores[4]
+    solution = valores[4] - solution
     valores[2] = solution
     return solution
 
